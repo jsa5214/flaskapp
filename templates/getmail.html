@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Consultar correu{% endblock %}
+
+{% block content %}
+<h2>Consultar correu</h2>
+
+<form method="post">
+    <input type="text" name="nom" placeholder="Nom" required>
+    <button type="submit">Consultar</button>
+</form>
+
+{% if resultat %}
+    <p class="ok">El correu és: {{ resultat }}</p>
+{% elif error %}
+    <p class="error">{{ error }}</p>
+{% endif %}
+
+<a href="/addmail">Afegir nou correu</a>
+{% endblock %}

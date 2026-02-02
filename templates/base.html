@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Gestió de correus</h1>
+    <nav>
+        <a href="/getmail">Consultar correu</a> |
+        <a href="/addmail">Afegir correu</a>
+    </nav>
+</header>
+
+<hr>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

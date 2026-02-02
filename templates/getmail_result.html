@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <title>Resultat consulta</title>
+</head>
+<body>
+
+{% if error %}
+    <h2>Error: el nom "{{ nom }}" no existeix.</h2>
+{% else %}
+    <h2>El correu de {{ nom }} és: {{ mail }}</h2>
+{% endif %}
+
+<br>
+<a href="/getmail">Tornar a consultar</a><br>
+<a href="/addmail">Afegir correu</a>
+
+</body>
+</html>
